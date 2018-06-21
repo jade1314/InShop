@@ -1,0 +1,5 @@
+<!--pages/login-again/index.wxml-->
+<text>pages/login-again/index.wxml</text>
+<view class='top'>
+  <image src='../../assets/nickbackground.jpg'></image>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/inshop/index.wxml-->
+<view class='inshop'>
+  <view style='width:80%;height:300rpx;background:white;'>
+    <image src='../../assets/nickbackground.jpg' style='width:100%;' mode='widthFix'></image>
+  </view>
+
+  <view style='width:60%;height:400rpx;background:white;'>
+    <image src='../../assets/nickbackground.jpg' style='width:100%;' mode='widthFix'></image>
+  </view>
+
+  <view style='width:100%;height:20rpx;background:gray'></view>
+
+  <view class='bottomview' style='width:100%;height:100rpx;'>
+    <text style='padding-left:40rpx;'>配送到家</text>
+  </view>
+
+  <view style='width:100%;height:20rpx;background:gray;flex-grow:100;'></view>
+
+</view>

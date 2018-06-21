@@ -1,0 +1,42 @@
+<!--pages/MY/other/vipinfo.wxml-->
+
+
+
+<view class='kind-list'>
+  <view class='vip-item'>
+
+    <view class='left'>账号 </view>
+    <view class='right'>{{id}}</view>
+  </view>
+
+  <view class='vip-item'>
+
+    <view class='left'>昵称</view>
+    <input class='rightinput' placeholder='请输入昵称'></input>
+
+  </view>
+
+  <view class='vip-item'>
+
+    <view class="left">生日</view>
+    <picker class='right' mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view>{{date}}</view>
+    </picker>
+
+  </view>
+
+
+  <view class='vip-item' style='justify-content:flex-start'>
+
+    <view class='left'>性别</view>
+
+    <radio-group name="radio" class='right'>
+      <label class='equally-component' wx:for='{{items}}'>
+        <radio value="{{item.value}}" checked="{{item.checked}}" /> {{item.item}}
+      </label>
+    </radio-group>
+
+  </view>
+  <button class='confirmbtn'>保 存</button>
+
+</view>

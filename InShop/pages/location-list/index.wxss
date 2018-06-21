@@ -1,0 +1,11 @@
+/* pages/location-list/index.wxss */
+
+#myMap {
+  width: 100%;
+  height: 600rpx;
+}
+
+.cameratest {
+  width: 100%;
+  height: 100%;
+}

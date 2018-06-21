@@ -1,0 +1,35 @@
+/* pages/order-detail/index.wxss */
+
+.cell{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  padding:20rpx;
+  background: white;
+}
+.cell .item{
+  font-size: 24rpx;
+
+}
+.cell .b{
+  border-width: 1px;
+  border-color: grey;
+  border-style: solid;
+}
+
+.footer{
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  height: 100rpx;
+  background: white;
+  width: 100%
+}
+
+.footer .btn{
+  font-size: 24rpx;
+  margin-right: 40rpx;
+}

@@ -1,13 +1,100 @@
-<!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <!-- <view class="swiper-container">
+        <swiper class="swiper_box" 
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
+            <block wx:for="{{banners}}" wx:key="id">
+                <swiper-item>
+                    <image bindtap="tapBanner" data-id="{{item.businessId}}" src="{{item.picUrl}}_m" class="slide-image" width="750rpx" height="562.5rpx"/>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="dots">  
+            <block wx:for="{{banners}}" wx:key="unique">  
+                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>  
+            </block>  
+        </view>  
+   </view> -->
+
+  <!-- <view class="search-view" style="background:{{ scrollTop === 0 ?'-webkit-linear-gradient(top, rgba(105,195,170, 1), rgba(105,195,170, 0.3))' :( scrollTop<200 ? 'rgba(105,195,170,'+(scrollTop/400+0.3) +')' : 'rgba(105,195,170,1)')  }} ">
+      <view>1111</view>
+      <view class="search-content">
+        <image src="/images/search-pic.png" class="search-icon" />
+        <input placeholder="请输入搜索内容" class="search-input" maxlength="30" confirm-type="搜索" bindinput='listenerSearchInput' bindconfirm='toSearch'>
+        </input>
+      
+      </view>
+    </view> -->
+
+  <view class='top-view'>
+    <view class='left-view' bindtap='currentPosition'>
+      <view class='cityname'>{{presentPosition? presentPosition:'当前位置'}}</view>
+      <view class='cityimg'>
+        <image class='position-icon' src='/images/order-details/icon-address.png' mode='aspectFit'></image>
+      </view>
+    </view>
+    <view class="search-content">
+      <image src="/images/search-pic.png" class="search-icon" />
+      <input placeholder="请输入商家、商品名称" class="search-input" maxlength="30" confirm-type="搜索" bindinput='listenerSearchInput' bindconfirm='toSearch'>
+      </input>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <view style="height:1px;background: #eee;width:100%;"></view>
+
+  <view wx:if="{{noticeList}}" class="notice">
+    <view class="notice_iteml">公告：</view>
+    <swiper wx:if="{{noticeList}}" class="notice_swiper" vertical="true" autoplay="true" circular="true" interval="3000">
+      <navigator wx:for-items="{{noticeList.dataList}}" wx:key="id" url="/pages/notice/show?id={{item.id}}" open-type="navigate">
+        <swiper-item>
+          <view class="notice_itemr">{{item.title}}</view>
+        </swiper-item>
+      </navigator>
+    </swiper>
   </view>
+
+  <view class="coupons" hidden="{{hasNoCoupons}}">
+    <scroll-view class="coupons-scroll" scroll-x="true">
+      <view class="coupons-item" wx:for-items="{{coupons}}" wx:for-index="idx" wx:key="id" bindtap="gitCoupon" data-id="{{item.id}}">
+        <view style="font-size: 35rpx"> ￥ {{item.moneyMax}}元 </view>
+        <view> {{item.name}} </view>
+        <view> 满 {{item.moneyHreshold}} 元使用 </view>
+        <view wx:if="{{item.dateEndType == 0}}"> {{item.dateEnd}} 前有效 </view>
+        <view wx:if="{{item.dateEndType == 1}}"> 领取 {{item.dateEndDays}} 天内有效 </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view hidden="{{loadingMoreHidden ? true : false}}" class="no-more-goods">没有更多啦</view>
+</view>
+
+
+<view wx:if="{{!isLoading}}" class='bottom-total-back'>
+
+
+  <scroll-view class="types" scroll-y="true" style="height:{{scrollHeight}}px;">
+    <view wx:key="" wx:for="{{categories}}" class="type {{activeCategoryId == categories[index].id ? 'active' : ''}}" bindtap="tapTpye" data-current="{{categories[index].id}}">
+      <view class="border"></view>
+      <text>{{categories[index].name}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="back-bottom">
+
+    <view class="list">
+      <view class="goods-wrap" wx:key="" wx:for="{{goods}}" bindtap="toDetailsTap" data-id="{{goods[index].id}}">
+        <image class="goods-img" src="{{item.pic}}_m" mode='widthFix'></image>
+        <view class="text">
+          <view class="title">
+            <text>{{goods[index].name}}</text>
+          </view>
+          <view class="price">
+            <text class="new">￥{{goods[index].minPrice}}元</text>
+            <text class="old">￥{{goods[index].originalPrice}}元</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
 </view>

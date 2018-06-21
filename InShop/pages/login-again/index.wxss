@@ -1,0 +1,5 @@
+/* pages/login-again/index.wxss */
+
+.top {
+  width: 100%;
+}

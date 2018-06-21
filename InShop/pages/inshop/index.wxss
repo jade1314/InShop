@@ -1,0 +1,19 @@
+/* pages/inshop/index.wxss */
+
+
+.inshop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.bottomview{
+  background: white;
+  color: blue;
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+}
+

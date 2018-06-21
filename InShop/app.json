@@ -1,14 +1,71 @@
 {
   "pages": [
+    "pages/start/start",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/shoppingCart/shoppingCart",
-    "pages/MY/myPage"
+    "pages/goods-details/index",
+    "pages/shop-cart/index",
+    "pages/to-pay-order/index",
+    "pages/select-address/index",
+    "pages/address-add/index",
+    "pages/order-list/index",
+    "pages/order-details/index",
+    "pages/wuliu/index",
+    "pages/mycoupons/index",
+    "pages/my/index",
+    "pages/notice/show",
+    "pages/recharge/index",
+    "pages/withdraw/index",
+    "pages/kanjia/index",
+    "pages/authorize/index",
+    "pages/gohome/index",
+    "pages/vipinfo/index",
+    "pages/often-list/index",
+    "pages/order-detail/index",
+    "pages/new-detail/index",
+    "pages/shopping-list/index",
+    "pages/location-list/index",
+    "pages/login-again/index",
+    "pages/regeocoding/index",
+    "pages/position-search/index",
+    "pages/inshop/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#28A946",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "配送到家",
+        "iconPath": "assets/images/icon_home.png",
+        "selectedIconPath": "assets/images/icon_home.png"
+      },
+      {
+        "pagePath": "pages/inshop/index",
+        "text": "到店",
+        "iconPath": "assets/images/icon_shop_cart.png",
+        "selectedIconPath": "assets/images/icon_shop_cart.png"
+      },
+      {
+        "pagePath": "pages/shop-cart/index",
+        "text": "配送购物车",
+        "iconPath": "assets/images/icon_shop_cart.png",
+        "selectedIconPath": "assets/images/icon_shop_cart.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "会员中心",
+        "iconPath": "assets/images/icon_info.png",
+        "selectedIconPath": "assets/images/icon_info.png"
+      }
+    ]
+  },
+  "debug": false
 }

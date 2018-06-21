@@ -1,0 +1,64 @@
+/* pages/MY/other/vipinfo.wxss */
+@import "../../common/index.wxss";
+
+/* @import '../my/index.wxss'; */
+
+.vip-item {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 24rpx;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vip-item .left {
+  padding-left: 40rpx;
+}
+
+.vip-item .right {
+  padding-right: 40rpx;
+  width: 60%;
+}
+
+.vip-item .rightinput {
+  padding-right: 40rpx;
+  width: 60%;
+  color: rgba(242, 242, 242, 1);
+}
+
+.vip-item .input {
+  background: rgba(242, 242, 242, 1);
+}
+
+.equally-component {
+  width: 30%;
+  height: 50%;
+  text-align: center;
+  align-content: center;
+}
+
+.confirmbtn {
+  width: 90%;
+  height: 40px;
+  margin-top: 100px;
+  text-align: center;
+  background: #1aad19;
+  font-size: 17px;
+  color: #fff;
+}
+
+label {
+  display: inline-block;
+  min-width: 200rpx;
+  margin-right: 20rpx;
+}
+
+.oftengoodsbtn {
+  width: 50px;
+  height: 100px;
+  right: 20px;
+  vertical-align: center;
+}

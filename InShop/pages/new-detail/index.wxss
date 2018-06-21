@@ -1,0 +1,90 @@
+.cell {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  padding: 20rpx;
+  background: white;
+  font-size: 24rpx;
+}
+
+.cell .item {
+  font-size: 24rpx;
+}
+
+.cell .left {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.cell .center {
+  width: 30%;
+  flex-grow: 3;
+}
+
+.cell .right {
+  width: 160rpx;
+}
+
+.cell .left .img {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.cell .b {
+  border-width: 1px;
+  border-color: grey;
+  border-style: solid;
+}
+
+.footer {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  justify-content: space-between;
+  height: 100rpx;
+  background: white;
+  width: 100%;
+}
+
+.footer .b {
+  border-width: 1px;
+  border-color: grey;
+  border-style: solid;
+  padding: 0 20rpx;
+}
+
+.footer .btn {
+  font-size: 24rpx;
+  margin-right: 40rpx;
+}
+
+.footer .left {
+  font-size: 24rpx;
+  width: 40%;
+  height: 100%;
+  margin-left: 40rpx;
+  text-align: left;
+}
+
+.footer .left .top {
+  height: 50%;
+  align-items: flex-end;
+}
+
+.footer .left .bottom {
+  height: 50%;
+  align-items: flex-start;
+}
+
+.footer .right {
+  display: flex;
+  font-size: 24rpx;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer .right .btn {
+  font-size: 24rpx;
+}

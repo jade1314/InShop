@@ -1,0 +1,48 @@
+<!--pages/order-detail/index.wxml-->
+<view>
+  <view class='cell'>
+    <view class='item'>订单编号：</view>
+    <view class='item' style='flex-grow:4;text-align:left'>xxxxxxxxxxxxxxxxxxxxxx</view>
+    <view class='item b' style='padding:0 20rpx;'>已完成</view>
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class='cell' style='font-size:30rpx'>中商惠民</view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view>
+    <view class='cell'>
+      <view class='item b' style='padding:0 20rpx;'>称重</view>
+      <view class='item'>精品香蕉</view>
+      <view class='item' style='color:#eee'>0.98kg</view>
+      <view class='item'>¥ 11.84</view>
+    </view>
+    <view class='cell'>
+      <view class='item'>海之言柠檬果味饮料</view>
+      <view class='item' style='color:#eee'>x 1</view>
+      <view class='item'>¥ 4.20</view>
+    </view>
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class='cell'>
+    <view class='item'>支付方式</view>
+    <view class='item'>微信支付</view>
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view>
+    <view class='cell'>
+      <view class='item' style='color:#eee'>下单时间</view>
+      <view class='item' style='color:#eee'>2018-01-01 00-00-00</view>
+    </view>
+    <view class='cell'>
+      <view class='item' style='color:#eee'>商品金额</view>
+      <view class='item' style='color:#eee'>¥ 16.04</view>
+    </view>
+    <view class='cell'>
+      <view class='item'>实付金额</view>
+      <view class='item'>¥ 16.04</view>
+    </view>
+  </view>
+  <view style="height:500rpx;background: #eee;width:100%;"></view>
+  <view class='footer'>
+    <button size='mini'>再次购买</button>
+  </view>
+</view>

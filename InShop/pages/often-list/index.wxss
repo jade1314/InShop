@@ -1,0 +1,70 @@
+/* pages/gohome/index.wxss */
+
+.table-backview {
+  width: 100%;
+  height: 100%;
+}
+
+.table-backview .cell {
+  width: 100%;
+  display: flex;
+  padding: 10rpx;
+}
+
+.table-backview .cell .blockviewleft {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.table-backview .cell .blockviewleft .img {
+  width: 160rpx;
+  height: 160rpx;
+  /* width: 100%; */
+}
+
+.table-backview .cell .blockviewcenter {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 3;
+}
+
+.table-backview .cell .blockviewcenter .top {
+  width: 100%;
+  font-size: 24rpx;
+  color: black;
+  padding: 20rpx;
+}
+
+.table-backview .cell .blockviewcenter .bottom {
+  width: 100%;
+  font-size: 20rpx;
+  color: red;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.table-backview .cell .blockviewcenter .bottom .price {
+  width: auto;
+}
+
+.table-backview .cell .blockviewcenter .bottom .cart {
+  width: 40rpx;
+}
+
+.table-backview .cell .blockviewcenter .bottom .cart .img {
+  width: 100%;
+}
+
+.table-backview .cell .blockviewright {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.table-backview .cell .blockviewright .oftenlist {
+  font-size: 16rpx;
+  color: black;
+}

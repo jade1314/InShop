@@ -1,0 +1,23 @@
+<!--pages/gohome/index.wxml-->
+<view class='table-backview' wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+
+  <view class='cell'>
+    <view class='blockviewleft'>
+      <image class='img' src='{{item.pic}}_m' mode="aspectFill" lazy-load="true"></image>
+    </view>
+    <view class='blockviewcenter'>
+      <view class='top'>{{item.name}}</view>
+      <view class='bottom'>
+        <view class='price'>¥ {{item.minPrice}}</view>
+        <view class='cart' bindtap='gotocart'>
+          <image class='img' src='../../assets/images/icon_shop_cart.png' mode="widthFix" lazy-load="true"></image>
+        </view>
+
+      </view>
+    </view>
+    <view class='blockviewright'>
+      <button class="oftenlist" size="mini" type="default" bindtap='addoftenlist'>+常购清单</button>
+    </view>
+  </view>
+  <view style="height:2rpx;background: #eee;width:100%;margin-left:40rpx"></view>
+</view>

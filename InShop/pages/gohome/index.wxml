@@ -1,0 +1,73 @@
+<!--pages/gohome/index.wxml-->
+
+
+
+<view class='top-view'>
+  <view class='left-view' bindtap='open'>
+
+
+    <view class='cityname'>{{city? city:'当前位置'}}</view>
+
+    <view class='cityimg'>
+      <image class='position-icon' src='/images/order-details/icon-address.png' mode='aspectFit'></image>
+    </view>
+  </view>
+  <view class="search-content">
+    <image src="/images/search-pic.png" class="search-icon" />
+    <input placeholder="搜索地址" class="search-input" maxlength="30" confirm-type="搜索" bindinput='listenerSearchInput' bindconfirm='toSearch'>
+    </input>
+  </view>
+</view>
+<map id="myMap" class="map-hide {{inputtext?'map-show':''}}" show-location />
+
+<view style="height:20rpx;background: #eee;width:100%;"></view>
+
+<view class='position-now'>
+  <view class='top'>当前定位</view>
+  <view class='bottom-view'>
+    <view class='address'>{{addressText}}</view>
+    <view class='warning'>{{warning}}</view>
+    <view class='position-icon' bindtap='relocation'>
+      <view class='imgback' animation="{{animation}}">
+        <image class='img' src='/images/order-details/icon-address.png' mode='aspectFit'></image>
+      </view>
+      <view class='relocation'>重新定位</view>
+    </view>
+  </view>
+</view>
+
+<view style="height:20rpx;background: #eee;width:100%;"></view>
+
+<view class='nearbylist' wx:for="{{totalData}}" bindtap='selectlocation' data-backData="{{totalData[index]}}">
+
+
+  <view class='cell'>{{totalData[index].name}}</view>
+
+  <view class='cell'>{{totalData[index].city + " " + totalData[index].district + " " + totalData[index].business}}</view>
+  <view style="height:1px;background: #eee;width:100%;"></view>
+</view>
+
+
+<!--地区自定义picker-->
+<view class="citypicker" wx:if="{{condition}}">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="close" class="city-cancel">取消</view>
+      <view bindtap="close" class="city-true">确定</view>
+
+    </view>
+
+    <picker-view-column>
+
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+
+    <!-- <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column> -->
+  </picker-view>
+</view>

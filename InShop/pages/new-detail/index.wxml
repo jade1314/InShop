@@ -1,0 +1,66 @@
+<!--pages/order-detail/index.wxml-->
+<view>
+  <view class='cell'>
+    <view class='item'>订单编号：</view>
+    <view class='item' style='flex-grow:4;text-align:left'>xxxxxxxxxxxxxxxxxxxxxx</view>
+    <view class='item b' style='padding:0 20rpx;'>已完成</view>
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+
+
+  <view class='cell'>111</view>
+  <view class='cell'>111</view>
+
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view>
+    <view class='cell' style='font-size:30rpx'>中商惠民</view>
+    <view class='cell'>
+      <view class='item'>预计配送时间</view>
+      <view class='item'>2018-01-01 00-00-00</view>
+    </view>
+    <view class='cell'>
+      <view class='item left'>
+        <image class='img' src='../../assets/testimg.jpg' mode='aspectFit'></image>
+      </view>
+      <view class='center' style='display:block'>
+        <view class='item'>海之言柠檬果味饮料</view>
+        <view class='item'>x 2</view>
+      </view>
+      <view class='item' style='text-align:bottom'>¥ 8.80</view>
+    </view>
+
+  </view>
+
+
+
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view>
+    <view class='cell'>
+      <view class='item' style='color:#eee'>下单时间</view>
+      <view class='item' style='color:#eee'>2018-01-01 00:00:00-00:00</view>
+    </view>
+    <view class='cell'>
+      <view class='item' style='color:#eee'>商品金额</view>
+      <view class='item' style='color:#eee'>¥ 16.04</view>
+    </view>
+    <view class='cell'>
+      <view class='item' style='color:#eee'>配送运费</view>
+      <view class='item' style='color:#eee'>+¥ 0.00</view>
+    </view>
+    <view class='cell'>
+      <view class='item'>实付金额</view>
+      <view class='item'>¥ 16.04</view>
+    </view>
+  </view>
+  <view style="height:500rpx;background: #eee;width:100%;"></view>
+  <view class='footer'>
+    <view class='left'>
+      <view class='top'>剩余付款时间</view>
+      <view class='bottom'>19分59秒</view>
+    </view>
+    <view class='right'>
+      <button class='btn b' mode='mini'>取消订单</button>
+      <button class='btn b' mode='mini'>立即支付</button>
+    </view>
+  </view>
+</view>
